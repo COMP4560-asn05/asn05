@@ -392,6 +392,8 @@ namespace asgn5v1
         void MenuNewDataOnClick(object obj, EventArgs ea)
         {
             //MessageBox.Show("New Data item clicked.");
+            if (timer.Enabled)
+                timer.Stop();
             gooddata = GetNewData();
             RestoreInitialImage();
         }
